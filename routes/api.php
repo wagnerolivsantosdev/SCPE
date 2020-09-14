@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::post('/cursos', 'Api\CursoController@index');
 Route::post('/grades', 'Api\GradeController@index');
 Route::post('/disciplinas', 'Api\DisciplinaController@index');
+Route::post('/ementa', 'Api\EmentaController@index');
+Route::put('/ementa', 'Api\EmentaController@update');
