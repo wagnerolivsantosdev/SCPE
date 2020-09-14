@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/consulta', 'ConsultaController@index')->name('consulta');
 
 Auth::routes();
 
