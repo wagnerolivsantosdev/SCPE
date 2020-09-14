@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/cursos', 'Api\CursoController@index');
+Route::post('/grades', 'Api\GradeController@index');
