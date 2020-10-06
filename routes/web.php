@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +20,10 @@ Route::get('/', function () {
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/consulta', 'ConsultaController@index')->name('consulta');
 
-Auth::routes();
+Route::get('/login', 'Auth\LoginController@index')->name('login');
+Route::post('/login', 'Auth\LoginController@login');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/registrar', 'Auth\RegistrarController@index')->name('registrar');
+Route::post('/registrar', 'Auth\RegistrarController@store');
+
+Route::get('/sair', 'Auth\LogoutController@logout')->name('logout');

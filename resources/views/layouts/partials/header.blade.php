@@ -2,7 +2,7 @@
     {{-- Barra Navegação Superior --}}
     <nav class="navbar navbar-dark navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">SCPE</a>
+            <a href="{{ route('dashboard') }}" class="navbar-brand">SCPE</a>
             <button id="navbar-toggler" class="navbar-toggler text-lowercase text-justify border rounded-circle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -102,7 +102,7 @@
 
                             <hr class="mt-1 mb-1" />
 
-                            <a class="dropdown-item" href="#">
+                            <a href="{{ route('logout') }}" class="dropdown-item" href="#">
                                 <div class="row m-0">
                                     {{-- Icone --}}
                                     <div class="col-2 align-middle">
@@ -110,7 +110,7 @@
                                     </div>
                                     {{-- Mensagem --}}
                                     <div class="col-10 align-middle text-truncate">
-                                        <span>Logout</span>
+                                        <span>Sair</span>
                                     </div>
                                 </div>
                             </a>
