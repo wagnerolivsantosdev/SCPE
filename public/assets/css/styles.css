@@ -1,17 +1,35 @@
 @charset "UTF-8";
+
 /* ==========================================================================
    CONFIGURAÇÃO
  ========================================================================== */
 
-body {
+body,
+html {
+    width: 100% !important;
+    height: 100% !important;
     background-color: #eee;
 }
 
+
+/* Background Laranja */
+
+.orange-gradient {
+    background: linear-gradient(90deg, #f5a942 0%, #fe5a0b 100%);
+}
+
+
 /* Adicionando Peso nas fontes */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
 }
+
 
 /* Removendo Decoração nos Links */
 
@@ -26,12 +44,83 @@ a {
     outline: none;
 }
 
+
 /* Removendo Padding's Esquerda e Direita das Colunas */
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
     padding-right: 0px;
     padding-left: 0px;
 }
+
 
 /* ==========================================================================
     ANIMAÇÕES
@@ -50,9 +139,11 @@ a {
     }
 }
 
+
 /* ==========================================================================
     LAYOUT
  ========================================================================== */
+
 
 /*  Barra Superior */
 
@@ -67,6 +158,7 @@ a {
     color: #ffffff;
 }
 
+
 /* Botão Barra Superior */
 
 .navbar-toggler {
@@ -78,6 +170,7 @@ a {
     outline: none;
 }
 
+
 /* Botão Barra Superior */
 
 .navbar-toggler:focus {
@@ -88,17 +181,21 @@ a {
     outline: none;
 }
 
+
 /* Botao Barra Superior Hover */
+
 .navbar-toggler:hover {
     /* Display & Modelo de Caixa */
     box-shadow: 0px 1px 6px #eee;
 }
+
 
 /* Icone Botao Principal Navbar */
 
 .navbar-toggler i {
     color: #ffffff;
 }
+
 
 /* Botoes Principais */
 
@@ -119,11 +216,13 @@ a {
     color: #000000;
 }
 
+
 /* Visualizacao Menu */
 
 .dropdown-menu .show {
     display: block;
 }
+
 
 /* Notificacao: links */
 
@@ -138,6 +237,7 @@ a {
     user-select: none;
 }
 
+
 /* Itens do Menu dropdown */
 
 .dropdown-menu .dropdown-item {
@@ -149,6 +249,7 @@ a {
     font-size: .9rem;
     font-weight: 300;
 }
+
 
 /* Notificacao: Efeito ao Passar Mouse */
 
@@ -162,6 +263,7 @@ a {
     transition: all .2s linear;
 }
 
+
 /* Menu Botao Perfil */
 
 .userDropdown {
@@ -173,8 +275,10 @@ a {
     width: 5rem;
 }
 
+
 /* Imagem Usuario Barra Superior */
-.nav-user-img{
+
+.nav-user-img {
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -182,10 +286,13 @@ a {
     margin-right: 5px;
 }
 
+
 /* Icone Usuario Barra Superior */
+
 .dropdown-icon {
     margin-right: 7px;
 }
+
 
 /* Estrutura Principal */
 
@@ -195,6 +302,122 @@ a {
     /* Outros */
     width: 100%;
 }
+
+
+/* Layout >> Login e Registro
+ ========================================================================== */
+
+
+/* Particulas Background Login e Registro */
+
+.intro {
+    /* Posicionamento */
+    position: absolute;
+    top: 0;
+    /* Display & Modelo de Caixa */
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-auth {
+    /* Posicionamento */
+    position: relative;
+    /* Display & Modelo de Caixa */
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.wrapper-auth-login {
+    width: 65%;
+}
+
+
+/* Header Login */
+
+.form-header-login {
+    /* Display & Modelo de Caixa */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: -3.13rem;
+    margin-bottom: 1.5rem;
+    /* Outros */
+    color: #fff;
+    background: linear-gradient(40deg, #45cafc, #303f9f);
+    text-align: center;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+}
+
+.form-icon {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.btn-entrar,
+.btn-registrar {
+    width: 100%;
+}
+
+
+/* Corpo do Tela Login */
+
+.card-auth-login {
+    /* Display & Modelo de Caixa */
+    margin-top: 1.875rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    /* Outros */
+    background-color: rgba(255, 255, 255, .95);
+}
+
+
+/* Linha Divisão */
+
+.line-auth-login {
+    height: 1px;
+    background-color: #fe5a0b;
+}
+
+
+/* Label's Login */
+
+.label-auth-user,
+.label-auth-password,
+.label-register-name,
+.label-register-email,
+.label-register-password {
+    /* Outros */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #727272;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+#email,
+#password {
+    /* Display & Modelo de Caixa */
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    /* Outros */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
 
 /* ==========================================================================
    Barra Lateral
@@ -219,15 +442,18 @@ a {
     transition: all 0.3s;
 }
 
+
 /* Esconder Barra ao Clicar */
 
 .wrapper-sidebar.ocultarSidebar {
     margin-left: 0 !important;
 }
 
+
 /* ==========================================================================
     Barra Lateral
  ========================================================================== */
+
 
 /* Menu >> Header
  ========================================================================== */
@@ -244,6 +470,7 @@ a {
     border: 0px;
     margin: 0px;
 }
+
 
 /* Header Menu */
 
@@ -286,6 +513,7 @@ a {
     font-size: 11px;
 }
 
+
 /* Cor Icone Status */
 
 .status-usuario i {
@@ -295,6 +523,7 @@ a {
     color: #56ce56;
     font-size: 8px;
 }
+
 
 /* Sonar do Status */
 
@@ -312,13 +541,16 @@ a {
     animation: sonar 1.5s infinite;
 }
 
+
 /* Menu >> Search
  ========================================================================== */
+
 .sidebar-search {
     margin: 0px 15px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
 }
+
 
 /* Espacamento Search */
 
@@ -326,27 +558,33 @@ a {
     padding: 20px 0px;
 }
 
+
 /* Campo search */
 
-.sidebar-search .input-group-text, .sidebar-search .campo-busca {
+.sidebar-search .input-group-text,
+.sidebar-search .campo-busca {
     /* Display & Modelo de Caixa */
     box-shadow: none;
     border: none;
     margin-left: 1px;
     /* Outros */
     color: #ffffff;
-    
 }
 
+
 /* Campo Pesquisa */
+
 .campo-busca {
     background-color: rgba(255, 255, 255, .5) !important;
 }
 
+
 /* Botão Search */
+
 .sidebar-search .input-group-text {
     background-color: #fe5a0b;
 }
+
 
 /* Icone Campo Buscar */
 
@@ -357,8 +595,10 @@ a {
     color: #ffffff;
 }
 
+
 /* Menu >> Opcoes
  ========================================================================== */
+
 
 /* Titulo Menu */
 
@@ -370,6 +610,7 @@ a {
     font-weight: bold;
     font-size: 16px;
 }
+
 
 /* Itens do Menu */
 
@@ -385,14 +626,14 @@ a {
     text-decoration: none;
 }
 
+
 /* Menu Icones */
 
 .sidebar-menu-icon {
     /* Display & Modelo de Caixa */
-    line-height: 2.188rem;    
+    line-height: 2.188rem;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
-  
     /* Outros */
     color: white;
     background: linear-gradient(90deg, #f5a942 0%, #fe5a0b 100%);
@@ -401,14 +642,15 @@ a {
 }
 
 .menu-text {
-    line-height: 2.188rem;   
+    line-height: 2.188rem;
 }
 
-.menu-text + i {
-    float:right;
-    line-height: 2.188rem;  
+.menu-text+i {
+    float: right;
+    line-height: 2.188rem;
     font-size: 1.2rem;
 }
+
 
 /* Menu Links*/
 
@@ -427,7 +669,7 @@ a {
     color: #fe5a0b;
     background-color: rgba(255, 255, 255, 0.7);
     transform: scale(1.02);
-    transition: all ease 400ms; 
+    transition: all ease 400ms;
     text-decoration: none !important;
 }
 
@@ -437,12 +679,15 @@ a {
     font-weight: bold;
 }
 
-.icon-active  {
+.icon-active {
     background: #fe5a0b;
 }
+
+
 /* ==========================================================================
     Footer Barra Lateral
  ========================================================================== */
+
 .sidebar-footer {
     /* Posicionamento */
     position: absolute;
@@ -459,17 +704,19 @@ a {
     background-color: #004bbc;
 }
 
-.sidebar-footer-items{
+.sidebar-footer-items {
     height: 2.75rem;
 }
 
-.sidebar-footer-configuracao .dropdown-menu{
+.sidebar-footer-configuracao .dropdown-menu {
     /* Display & Modelo de Caixa */
     height: 140px !important;
-    padding: 18px 15px;    
+    padding: 18px 15px;
 }
 
+
 /* Tamanho Fonte */
+
 .sidebar-footer-font {
     font-size: .95rem !important;
 }
@@ -477,6 +724,7 @@ a {
 .sidebar-footer-icon {
     color: #eee;
 }
+
 
 /* Quadrado de Atenção Notificação */
 
@@ -489,21 +737,27 @@ a {
     background-color: #ffff00;
 }
 
+
 /* Estrutura dos Icones */
 
-.sidebar-footer-notificacao, 
-.sidebar-footer-suporte, 
-.sidebar-footer-configuracao, 
+.sidebar-footer-notificacao,
+.sidebar-footer-suporte,
+.sidebar-footer-configuracao,
 .sidebar-footer-logout {
     /* Posicionamento */
     position: static;
 }
 
+
 /* Cor dos Icones */
 
-.footer-notificacao-link, .footer-suporte-link, .footer-configuracao-link, .footer-logout-link {
+.footer-notificacao-link,
+.footer-suporte-link,
+.footer-configuracao-link,
+.footer-logout-link {
     color: #adadad;
 }
+
 
 /* Estrutura Dropdown Menu */
 
@@ -522,6 +776,7 @@ a {
     transform: none !important;
 }
 
+
 /* Altura Dropdown Menu Notificacao */
 
 .sidebar-footer .dropdown-menu .notifications {
@@ -533,18 +788,19 @@ a {
     padding: 12px 0px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-
     /* Outros */
     color: #ffffff;
     background-color: #004bbc;
     font-weight: bold;
 }
 
+
 /* Altura Dropdown Menu Configuracao */
 
 #dropdown-menu-configuracao {
     height: 12rem !important;
 }
+
 
 /* Linha Divisao */
 
@@ -556,11 +812,13 @@ a {
     margin: .3rem 0;
 }
 
+
 /* Estrutura Conteudo da Notificacao */
 
 .sidebar-footer .notification-content {
     display: flex;
 }
+
 
 /* Dropdown Conteudo */
 
@@ -572,6 +830,7 @@ a {
     padding-left: 5px;
 }
 
+
 /* Espacamento Itens Dropdown */
 
 .sidebar-footer .dropdown-item {
@@ -582,11 +841,13 @@ a {
     font-size: .7rem;
 }
 
+
 /* Detalhes Notificacao */
 
 .sidebar-footer .notification-detail {
     padding-right: 12px;
 }
+
 
 /* Icone Conteudo da Notifacacao */
 
@@ -598,6 +859,7 @@ a {
     /* Outros */
     text-align: center;
 }
+
 
 /* ==========================================================================
     Estrutura Conteudo Principal
@@ -614,6 +876,7 @@ a {
     transition: all 0.3s;
 }
 
+
 /* ==========================================================================
     Breadcrumb
  ========================================================================== */
@@ -621,6 +884,7 @@ a {
 .content-breadcrumb {
     padding-top: 0.938rem;
 }
+
 
 /* Breadcrump Header */
 
@@ -632,6 +896,7 @@ a {
     background-color: #ffffff;
 }
 
+
 /* Estrutura Path */
 
 .breadcrumb-path {
@@ -642,11 +907,13 @@ a {
     margin: 0;
 }
 
+
 /* Path Item */
 
 .breadcrumb-path-item {
     float: left;
 }
+
 
 /* Path Link */
 
@@ -670,6 +937,7 @@ a {
     color: #ffffff;
 }
 
+
 /* Altera Primeiro item Path 'Home' */
 
 .breadcrumb-path-item:first-child .breadcrumb-path-link {
@@ -678,11 +946,13 @@ a {
     border-radius: 4px 0 0 4px;
 }
 
+
 /* Removendo Borda Antes do Primeiro Item */
 
 .breadcrumb-path-item:first-child .breadcrumb-path-link:before {
     border: none;
 }
+
 
 /* Adicionando Ultimo Filho Item */
 
@@ -692,17 +962,20 @@ a {
     border-radius: 0 4px 4px 0;
 }
 
+
 /* Removendo borda Depois do Ultimo Item */
 
 .breadcrumb-path-item:last-child .breadcrumb-path-link:after {
     border: none;
 }
 
+
 /* Alterando Background do Segundo Elemento Path */
 
 .breadcrumb-path-item:nth-child(even) .breadcrumb-path-link {
     background-color: #004bbc;
 }
+
 
 /* Bordar Segundo Item */
 
@@ -712,9 +985,11 @@ a {
     border-left-color: transparent;
 }
 
+
 /* Estrutura Antes e Depois '/' */
 
-.breadcrumb-path-item .breadcrumb-path-link:after, .breadcrumb-path-item .breadcrumb-path-link:before {
+.breadcrumb-path-item .breadcrumb-path-link:after,
+.breadcrumb-path-item .breadcrumb-path-link:before {
     /* Posicionamento */
     position: absolute;
     top: 0;
@@ -727,6 +1002,7 @@ a {
     content: "";
 }
 
+
 /* Primeiro Triangulo 'Home' */
 
 .breadcrumb-path-item .breadcrumb-path-link:after {
@@ -737,6 +1013,7 @@ a {
     border-left-color: #fe5a0b;
 }
 
+
 /* Triangulo Segundo Item */
 
 .breadcrumb-path-link:before {
@@ -744,9 +1021,11 @@ a {
     border-left-color: transparent;
 }
 
+
 /* ==========================================================================
     ScrollBar Barra Lateral
  ========================================================================== */
+
 
 /* Largura Scroll */
 
@@ -754,11 +1033,13 @@ a {
     width: 4px;
 }
 
+
 /* Removendo a Margin direita */
 
 .mCSB_inside>.mCSB_container {
     margin-right: 0 !important;
 }
+
 
 /* Alterando Cor Fundo do Scrollbar */
 
@@ -766,11 +1047,13 @@ a {
     background-color: #fe5a0b !important;
 }
 
+
 /* Efeito ao Passar o Mouse */
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
     background-color: #fe5a0b !important;
 }
+
 
 /* ==========================================================================
     Overlay
@@ -790,6 +1073,7 @@ a {
     background-color: rgba(0, 0, 0, .5);
 }
 
+
 /* ==========================================================================
     Footer Principal
  ========================================================================== */
@@ -807,6 +1091,7 @@ a {
     background: linear-gradient(90deg, #f79937 0%, #fe5a0b 100%);
 }
 
+
 /* Texto Footer Principal */
 
 .content-footer-paragraph {
@@ -816,6 +1101,7 @@ a {
     /* Outros */
     color: #ffffff;
 }
+
 
 /* ==========================================================================
    Dashboard
@@ -833,6 +1119,7 @@ a {
     margin-top: 1.25rem;
 }
 
+
 /* Header card */
 
 .card-admin-header {
@@ -841,6 +1128,7 @@ a {
     margin-right: 4%;
     margin-left: 4%;
 }
+
 
 /* Icone */
 
@@ -855,6 +1143,7 @@ a {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 /* Posição Titulos e Informação */
 
 .card-admin-info {
@@ -866,6 +1155,7 @@ a {
     text-align: right;
 }
 
+
 /* Tilulo Card */
 
 .card-admin-title {
@@ -874,11 +1164,13 @@ a {
     font-size: 12px;
 }
 
+
 /* Tamanho Barra Progresso */
 
 .card-progress {
     height: 6px;
 }
+
 
 /* Mensagem Card */
 
@@ -889,11 +1181,13 @@ a {
     font-weight: 400;
 }
 
+
 /* Cor Icone Curso */
 
 .background-curso-icon {
     background-color: rgb(0, 123, 255);
 }
+
 
 /* Porcentagem Curso */
 
@@ -904,11 +1198,13 @@ a {
     background-color: rgb(0, 123, 255);
 }
 
+
 /* Cor Icone Grade */
 
 .background-grade-icon {
     background-color: rgb(255, 202, 44);
 }
+
 
 /* Porcentagem Grade */
 
@@ -919,11 +1215,13 @@ a {
     background-color: rgb(255, 202, 44);
 }
 
+
 /* Cor Icone Disciplina */
 
 .background-disciplina-icon {
     background-color: rgb(40, 167, 69);
 }
+
 
 /* Porcentagem disciplina */
 
@@ -934,11 +1232,13 @@ a {
     background-color: rgb(40, 167, 69);
 }
 
+
 /* Cor Icone Ementa */
 
 .background-ementa-icon {
     background-color: rgb(220, 53, 69);
 }
+
 
 /* Porcentagem ementa */
 
@@ -948,6 +1248,7 @@ a {
     /* Outros */
     background-color: rgb(220, 53, 69);
 }
+
 
 /* ==========================================================================
    Charts
@@ -960,14 +1261,12 @@ a {
 .card-charts-header {
     /* Posicionamento */
     position: relative;
-
     /* Display & Modelo de Caixa */
     padding: 1.6rem 1rem;
     border-radius: 4px;
     margin-top: -1.25rem;
     margin-right: 4%;
     margin-left: 4%;
-
     /* Outros */
     color: #fff;
     background: linear-gradient(40deg, #45cafc, #303f9f)!important;
@@ -975,6 +1274,7 @@ a {
     overflow: hidden;
     cursor: default;
 }
+
 
 /* ==========================================================================
    Pagina Consulta
@@ -1014,10 +1314,11 @@ a {
     border-radius: .25em;
 }
 
+
 /* Combobox */
 
-.combobox-select-curso, 
-.combobox-select-grade, 
+.combobox-select-curso,
+.combobox-select-grade,
 .combobox-select-disciplina {
     /* Display & Modelo de Caixa */
     width: 100%;
@@ -1033,10 +1334,11 @@ a {
     cursor: pointer;
 }
 
+
 /* botao combobox */
 
-.combobox-curso::after, 
-.combobox-grade::after, 
+.combobox-curso::after,
+.combobox-grade::after,
 .combobox-disciplina::after {
     /* Posicionamento */
     position: absolute;
@@ -1058,19 +1360,21 @@ a {
     transition: .25s all ease
 }
 
+
 /* Passar Mouse Combobox */
 
-.combobox-select-curso:hover, 
-.combobox-select-grade:hover, 
+.combobox-select-curso:hover,
+.combobox-select-grade:hover,
 .combobox-select-disciplina:hover {
     border: 1px solid #45cafc;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.20), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
 }
 
+
 /* Passar Mouse Botao Combobox */
 
-.combobox-curso:hover::after, 
-.combobox-grade:hover::after, 
+.combobox-curso:hover::after,
+.combobox-grade:hover::after,
 .combobox-disciplina:hover::after {
     /* Outros */
     background: linear-gradient(40deg, #45cafc, #303f9f);
@@ -1079,7 +1383,6 @@ a {
 .fieldset-ementa {
     /* Posicionamento */
     position: relative;
-
     /* Display & Modelo de Caixa */
     width: auto;
     padding: 20px;
@@ -1087,17 +1390,19 @@ a {
     border: 2px solid #fe5a0b;
     border-radius: 4px;
     margin: 0;
-
-    /* Outros */ 
+    /* Outros */
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+
 /* Configuração Legenda */
+
 .ementa-legenda {
     width: auto;
     padding: 0 10px;
     border-bottom: none;
-  }
+}
+
 
 /* Estrutura Campo Ementa */
 
@@ -1115,10 +1420,13 @@ a {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.20), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
 }
 
+
 /* Botao Editar */
+
 #btnEditar {
     color: #ffffff;
 }
+
 
 /* ==========================================================================
    MEDIA QUERIES
@@ -1137,11 +1445,19 @@ a {
     .nav-bottom {
         display: none;
     }
-
 }
+
+@media screen and (max-width: 575.98px) {
+    .wrapper-login {
+        width: 100%;
+    }
+}
+
 
 /* Posicionamento */
 
+
 /* Display & Modelo de Caixa */
+
 
 /* Outros */

@@ -1,51 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Entrar</title>
-    <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-</head>
-<body>
+@extends('Auth.authLayout')
 
-    <div class="container mt-2">
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+@section('title')
+    SCPE
+@endsection
+
+@section('content')
+    <form method="post" class="mt-3 container">
+        @csrf
+        <div class="form-group">
+            <label for="email" class="m-0 label-auth-user">Usuário</label>
+            <div class="row no-gutters">
+                <div class="col-2 form-icon text-white d-flex justify-content-center orange-gradient">
+                    <i class="d-flex align-items-center fas fa-user"></i>
+                </div>
+                <div class="col">
+                    <input type="email" id="email" name="email" required placeholder="Usuário">
+                </div>
             </div>
-        @endif
+        </div>
 
-        <form method="post" class="mt-2">
-            @csrf
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required class="form-control">
+        <div class="form-group">
+            <label for="password" class="m-0 label-auth-password">Senha</label>
+            <div class="row no-gutters">
+                <div class="col-2 form-icon text-white d-flex justify-content-center orange-gradient">
+                    <i class="d-flex align-items-center fas fa-lock"></i>
+                </div>
+                <div class="col">
+                    <input type="password" id="password" name="password" required min="1" placeholder="Senha">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required min="1" class="form-control">
+
+        </div>
+
+        <div class="row  col-12 p-0 mt-4 mb-3 no-gutters d-flex justify-content-between">
+            <div class="col-12 col-sm-4 d-flex align-items-center mb-2">
+                <button type="submit" class="btn btn-primary btn-entrar">
+                    Entrar
+                </button>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">
-                Entrar
-            </button>
-
-            <a href="{{ route('registrar') }}" class="btn btn-secondary mt-3">
-                Registrar-se
-            </a>
-
-        </form>
-    </div>    
-
-    <!-- Scripts -->
-    <script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('node_modules/@popperjs/core/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    
-</body>
-</html>
+            <div class="col-12 col-sm-4 d-flex align-items-center mb-2">
+                <a href="{{ route('registrar') }}" class="btn btn-warning btn-registrar">
+                    Registrar
+                </a>
+            </div>
+        </div>
+    </form>
+@endsection

@@ -1,8 +1,9 @@
 /* Variaveis Globais */
 var dados, i;
 
-$(function () {
+$(function() {
 
+    backgroundPartiground();
     barraLateral();
     botaoNavbarPrincipal();
     customScrollbar();
@@ -10,7 +11,7 @@ $(function () {
 
     clickEffect();
 
-    $('#dashboard, #consulta, #cadastro, #grade, #secretaria').on('click', function () {
+    $('#dashboard, #consulta, #cadastro, #grade, #secretaria').on('click', function() {
         requestPage($(this).attr('id'));
 
         removerPaginaSelecionada();
@@ -30,34 +31,79 @@ $(function () {
 });
 
 /*
-* ============================================================================
-*     Funções Genericas
-* ============================================================================
-*/
+ * ============================================================================
+ *     Funções Genericas
+ * ============================================================================
+ */
+
+function backgroundPartiground() {
+
+    if (window.location.pathname == '/registrar' || window.location.pathname == '/login') {
+
+        $('body').css("background", "linear-gradient(90deg, #f5a942 0%, #fe5a0b 100%)");
+
+        $('#particles').particleground({
+
+            minSpeedX: 0.1,
+            maxSpeedX: 0.7,
+
+            minSpeedY: 0.1,
+            maxSpeedY: 0.7,
+
+            directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
+
+            directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
+            // How many particles will be generated: one particle every n pixels
+            density: 10000,
+
+            dotColor: '#fff',
+
+            lineColor: '#fff',
+
+            particleRadius: 7, // Dot size
+
+            lineWidth: 1,
+
+            curvedLines: false,
+
+            proximity: 100, // How close two dots need to be before they join
+
+            parallax: false,
+
+            parallaxMultiplier: 5, // The lower the number, the more extreme the parallax effect
+
+            onInit: function() {},
+
+            onDestroy: function() {}
+
+        });
+    }
+
+}
 
 function removerPaginaSelecionada() {
     /* Removendo classe Botao */
     $('.sidebar-opcao .sidebar-menu-link').find('.btn-active')
-                                          .removeClass('btn-active');
+        .removeClass('btn-active');
 
     /* Removendo Classe Icone */
     $('.sidebar-opcao .sidebar-menu-link').find('.icon-active')
-                                          .removeClass('icon-active');
+        .removeClass('icon-active');
 
     /* Removendo Objeto Icone do Dom */
     $('.sidebar-opcao .sidebar-menu-link').find('.sidebar-menu-text > i')
-                                          .remove();
+        .remove();
 }
 
 function adicionarSelecaoPagina(elemento) {
     /* Adicionando classe Botao e Icone no DOM */
     $(elemento).find('.sidebar-menu-text')
-           .addClass('btn-active')
-           .append('<i class="fas fa-chevron-circle-right text-white"></i>');
+        .addClass('btn-active')
+        .append('<i class="fas fa-chevron-circle-right text-white"></i>');
 
     /* Adicionando Classe Icone */
     $(elemento).find('.sidebar-menu-icon')
-               .addClass('icon-active');
+        .addClass('icon-active');
 }
 
 function visualizarConsole(elemento) {
@@ -102,7 +148,7 @@ function requestWebServer(formulario, type, pathname, callback) {
         url: url,
         data: parametros,
         success: callback,
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function(jqXHR, textStatus, errorThrown) {
 
             Swal.fire({
                 icon: 'error',
@@ -122,10 +168,10 @@ function requestPage(page) {
 
     if ((page == 'dashboard') || (page == 'homeBreadcrumb')) {
         url += 'dashboard #breadcrumb, #cards, #progressBar, #charts';
-        $('main').load(url, function () { charts(); });
+        $('main').load(url, function() { charts(); });
     } else if (page == 'consulta') {
         url += 'consulta #breadcrumb, #content';
-        $('main').load(url, function () { ComboboxController(); });
+        $('main').load(url, function() { ComboboxController(); });
     }
 }
 
@@ -137,7 +183,7 @@ function mensagenCurta(icone, mensagem) {
         showConfirmButton: false,
         timer: 2000,
         timerProgressBar: true,
-        onOpen: function (toast) {
+        onOpen: function(toast) {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
@@ -150,15 +196,15 @@ function mensagenCurta(icone, mensagem) {
 }
 
 /*
-* ============================================================================
-*     Layout
-* ============================================================================
-*/
+ * ============================================================================
+ *     Layout
+ * ============================================================================
+ */
 
 /* Controler Visualização da Sidebar */
 
 function barraLateral() {
-    $(window).resize(function () {
+    $(window).resize(function() {
 
         if ((larguraJanela() >= 768)) {
 
@@ -181,13 +227,15 @@ function barraLateral() {
 /* Scroll Personalizado */
 
 function customScrollbar() {
-    $('.sidebar-menu, #dropdown-menu-notificacao, #dropdown-menu-configuracao').mCustomScrollbar();
+    if (window.location.pathname == '/dashboard') {
+        $('.sidebar-menu, #dropdown-menu-notificacao, #dropdown-menu-configuracao').mCustomScrollbar();
+    }
 }
 
 /* Click Botão Principal Navbar */
 
 function botaoNavbarPrincipal() {
-    $('#navbar-toggler').on('click', function () {
+    $('#navbar-toggler').on('click', function() {
         $('.wrapper-sidebar').toggleClass('ocultarSidebar');
         overlay();
         removerSidebarOverlay();
@@ -207,17 +255,17 @@ function overlay() {
 /* Remover Sidebar e Overlay  ao Clicar na Protecão Tela */
 
 function removerSidebarOverlay() {
-    $('#sidebar-overlay').on('click', function () {
+    $('#sidebar-overlay').on('click', function() {
         $('.wrapper-sidebar').toggleClass('ocultarSidebar');
         $(this).remove();
     });
 }
 
 /*
-* ============================================================================
-*     Dashboard
-* ============================================================================
-*/
+ * ============================================================================
+ *     Dashboard
+ * ============================================================================
+ */
 
 /* Dados dos Graficos Pie e Line */
 
@@ -235,8 +283,7 @@ function charts() {
             type: 'line',
             data: {
                 labels: ["Janeiro", "Fevereiro", "Maço", "Abril", "Maio", "Junho", "Julho"],
-                datasets: [
-                    {
+                datasets: [{
                         label: "Data Set One",
                         fill: true,
                         lineTension: 0.3,
@@ -294,21 +341,20 @@ function charts() {
                     "Segundo",
                     "Terceiro"
                 ],
-                datasets: [
-                    {
-                        data: [250, 150, 300],
-                        borderWidth: [1, 1, 1],
-                        backgroundColor: [
-                            brandPrimary,
-                            "rgba(75,192,192,1)",
-                            "#FFCE56"
-                        ],
-                        hoverBackgroundColor: [
-                            brandPrimary,
-                            "rgba(75,192,192,1)",
-                            "#FFCE56"
-                        ]
-                    }]
+                datasets: [{
+                    data: [250, 150, 300],
+                    borderWidth: [1, 1, 1],
+                    backgroundColor: [
+                        brandPrimary,
+                        "rgba(75,192,192,1)",
+                        "#FFCE56"
+                    ],
+                    hoverBackgroundColor: [
+                        brandPrimary,
+                        "rgba(75,192,192,1)",
+                        "#FFCE56"
+                    ]
+                }]
             }
         });
 
@@ -320,15 +366,15 @@ function charts() {
 }
 
 /*
-* ============================================================================
-*     Consulta 
-* ============================================================================
-*/
+ * ============================================================================
+ *     Consulta 
+ * ============================================================================
+ */
 
 function ComboboxController() {
 
     /* Home Page */
-    $('#homeBreadcrumb').on('click', function () {
+    $('#homeBreadcrumb').on('click', function() {
         requestPage($(this).attr('id'));
     });
 
@@ -341,17 +387,17 @@ function ComboboxController() {
     requestWebServer('#formularioEmenta', 'POST', 'cursos', cursos);
 
     /* Requisição Combobox Grade */
-    $('#cbxCurso').on('click', function () {
+    $('#cbxCurso').on('click', function() {
         requestWebServer('#formularioEmenta', 'POST', 'grades', grades);
     });
 
     /* Requisição Combobox Disciplina */
-    $('#cbxGrade').on('click', function () {
+    $('#cbxGrade').on('click', function() {
         requestWebServer('#formularioEmenta', 'POST', 'disciplinas', disciplinas);
     });
 
     /* Requisição Combobox Ementa */
-    $('#cbxDisciplina').on('click', function () {
+    $('#cbxDisciplina').on('click', function() {
         requestWebServer('#formularioEmenta', 'POST', 'ementa', ementa);
         bloquearElemento('#campoEmenta');
     });
@@ -360,7 +406,7 @@ function ComboboxController() {
     $('#btnEditar').click(btnEditar);
 
     /* Botão Salvar */
-    $('#formularioEmenta').submit(function (e) {
+    $('#formularioEmenta').submit(function(e) {
         btnSalvar(e);
     });
 
@@ -420,15 +466,18 @@ function options(data, opcao) {
     dados = data['data'];
 
     switch (opcao) {
-        case 'curso': {
-            return gerarOptionCurso();
-        }
-        case 'grade': {
-            return gerarOptionGrade();
-        }
-        case 'disciplina': {
-            return gerarOptionDisciplina();
-        }
+        case 'curso':
+            {
+                return gerarOptionCurso();
+            }
+        case 'grade':
+            {
+                return gerarOptionGrade();
+            }
+        case 'disciplina':
+            {
+                return gerarOptionDisciplina();
+            }
     }
 }
 
@@ -480,7 +529,7 @@ function btnEditar(e) {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Sim'
-        }).then(function (result) {
+        }).then(function(result) {
             if (result.value) {
                 desbloquearElemento('#campoEmenta');
             }
@@ -508,9 +557,9 @@ function btnSalvar(e) {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Sim'
-        }).then(function (result) {
+        }).then(function(result) {
             if (result.value) {
-                requestWebServer('#formularioEmenta', 'PUT', 'ementa', function () {
+                requestWebServer('#formularioEmenta', 'PUT', 'ementa', function() {
                     ComboboxController();
                     Swal.fire({
                         icon: 'success',
@@ -526,7 +575,7 @@ function btnSalvar(e) {
 }
 
 /*
-* ============================================================================
-*     Funções
-* ============================================================================
-*/
+ * ============================================================================
+ *     Funções
+ * ============================================================================
+ */
