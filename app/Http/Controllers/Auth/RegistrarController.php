@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\RegistrarFormRequest;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\Request;
+
 
 
 class RegistrarController extends Controller
@@ -17,12 +16,18 @@ class RegistrarController extends Controller
         return view('Auth.registrar');
     }
 
-    public function store(Request $request)
+    public function store(RegistrarFormRequest $registrarFormRequest)
     {
-        $data = $request->except('_token');
-        $data['password'] = Hash::make($data['password']);
-        $user = User::create($data);
+        if (!$registrarFormRequest) {
+            return redirect()->back()->withErrors($registrarFormRequest->errors());
+        }
 
-        return redirect()->route('login');
+        $user = User::create([
+            'name' => $registrarFormRequest->get('name'),
+            'email' => $registrarFormRequest->get('email'),
+            'password' => Hash::make($registrarFormRequest->get('password')),
+        ]);
+
+        return redirect()->route('login')->with('message', 'User successfully registered!');
     }
 }
