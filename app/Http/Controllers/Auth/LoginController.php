@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -13,11 +13,11 @@ class LoginController extends Controller
         return view('Auth.login');
     }
 
-    public function login(Request $request)
+    public function login(LoginRequest $loginRequest)
     {
-        if (!Auth::attempt($request->only(['email', 'password']))) {
+        if (!Auth::attempt($loginRequest->only(['email', 'password']))) {
             return redirect()->back()
-                ->withErrors('Usuário e/ou Senha Incorreto!');
+                ->withErrors('Incorrect Username or Password! Please try again.');
         }
 
         return redirect()->route('dashboard');
