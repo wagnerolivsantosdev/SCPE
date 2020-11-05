@@ -7,11 +7,12 @@
 
             <li class="sidebar-menu-item">
                 <a id="dashboard" class="row col-12 m-0 sidebar-menu-link">
-                    <div class="col-2 text-center sidebar-menu-icon">
+                    <div class="col-2 text-center sidebar-menu-icon icon-active">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
-                    <div class="col sidebar-menu-text pl-2 pr-2">
+                    <div class="col sidebar-menu-text pl-2 pr-2 btn-active">
                         <span class="menu-text">Dashboard</span>
+                        <i class="fas fa-chevron-circle-right text-white"></i>
                     </div>
                 </a>
             </li>
