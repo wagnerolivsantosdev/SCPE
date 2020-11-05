@@ -1,7 +1,7 @@
 @extends('Auth.authLayout')
 
 @section('title')
-    SCPE
+    Login
 @endsection
 
 @section('content')

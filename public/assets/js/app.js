@@ -7,6 +7,7 @@ $(function() {
     barraLateral();
     botaoNavbarPrincipal();
     customScrollbar();
+    removerMensagemAlerta();
     charts();
 
     clickEffect();
@@ -79,6 +80,10 @@ function backgroundPartiground() {
         });
     }
 
+}
+
+function removerMensagemAlerta() {
+    $('.alert-danger, .alert-success').fadeOut(5000, "linear");
 }
 
 function removerPaginaSelecionada() {
