@@ -24,9 +24,19 @@
             <input type="password" id="password" name="password" required min="1" class="form-control">
         </div>
 
-        <button type="submit" class="btn btn-success mt-3">
-            Registrar
-        </button>
+        <div class="row  col-12 p-0 mt-4 mb-3 no-gutters d-flex justify-content-between">
+            <div class="col-12 col-sm-4 d-flex align-items-center mb-2">
+                <button type="submit" class="btn btn-primary btn-entrar">
+                    Registrar
+                </button>
+            </div>
+
+            <div class="col-12 col-sm-4 d-flex align-items-center mb-2">
+                <a href="{{ route('login') }}" class="btn btn-danger btn-registrar">
+                    Cancelar
+                </a>
+            </div>
+        </div>
 
     </form>
 
