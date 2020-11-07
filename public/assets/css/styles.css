@@ -759,6 +759,13 @@ a {
 }
 
 
+/* Hover Icone Logout Sider Footer */
+
+.footer-logout-link .sidebar-footer-icon:hover {
+    color: red;
+}
+
+
 /* Estrutura Dropdown Menu */
 
 .sidebar-footer .dropdown-menu {

@@ -111,7 +111,7 @@
 
         {{-- Logout --}}
         <div class="col text-center siderbar-footer-logout">
-            <a href="#" class="footer-logout-link">
+            <a href="{{ route('logout') }}" class="footer-logout-link">
                 <i class="sidebar-footer-icon fa fa-power-off"></i>
             </a>
         </div>
