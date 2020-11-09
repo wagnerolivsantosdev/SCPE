@@ -32,3 +32,5 @@ Route::get('/registrar', 'Auth\RegistrarController@index')->name('registrar');
 Route::post('/registrar', 'Auth\RegistrarController@store');
 
 Route::get('/sair', 'Auth\LogoutController@logout')->name('logout');
+
+Route::get('/secretaria', 'SecretariaController@index')->name('secretaria');
