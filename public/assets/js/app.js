@@ -177,6 +177,9 @@ function requestPage(page) {
     } else if (page == 'consulta') {
         url += 'consulta #breadcrumb, #content';
         $('main').load(url, function() { ComboboxController(); });
+    } else if (page == 'cadastro') {
+        url += page + ' #breadcrumb, #content';
+        $('main').load(url);
     }
 }
 

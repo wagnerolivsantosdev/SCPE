@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/cadastro','CadastroController@index')->name('cadastro');
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/consulta', 'ConsultaController@index')->name('consulta');
 
