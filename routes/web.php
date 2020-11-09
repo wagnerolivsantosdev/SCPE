@@ -19,8 +19,11 @@ Route::get('/', function () {
 
 Route::get('/cadastro','CadastroController@index')->name('cadastro');
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/consulta', 'ConsultaController@index')->name('consulta');
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('/grade','GradeController@index')->name('grade');
 
 Route::get('/login', 'Auth\LoginController@index')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
