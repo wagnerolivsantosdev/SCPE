@@ -56,7 +56,7 @@
                         <i class="far fa-edit"></i>
                     </div>
                     <div class="col sidebar-menu-text pl-2 pr-2">
-                        <span class="menu-text">Secretária</span>
+                        <span class="menu-text">Secretaria</span>
                     </div>
                 </a>
             </li>
