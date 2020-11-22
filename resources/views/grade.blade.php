@@ -10,6 +10,23 @@
                         <h5 class="mb-0"><strong>Grade</strong></h5>
                     </header>
                     <div class="card-body">
+
+                        <div class="row no-glutters mr-0 ml-0 mb-3">
+                            {{-- Curso --}}
+                            <div class="combobox-grade-curso col col-12 col-sm-12 col-md-12 col-xl-5 mt-3 pr-2">
+                                <select class="combobox-select-grade-curso" name="curso" id="cbxGradeCurso"></select>
+                            </div>
+
+                             {{-- Ano --}}
+                             <div class="combobox-grade-ano col col-12 col-sm-5 col-md-5 col-xl-3 mt-3 pr-2">
+                                <select class="combobox-select-grade-ano" name="ano" id="cbxGradeAno"></select>
+                            </div>
+                             {{-- Semestre --}}
+                             <div class="combobox-grade-semestre col col-12 col-sm-7 col-md-7 col-xl-4 mt-3 pr-2">
+                                <select class="combobox-select-grade-semestre" name="semestre" id="cbxGradeSemestre"></select>
+                            </div>                            
+                        </div>
+
                         {{-- Segunda-Feira --}}
                         <div class="inbox-mensagens box-grade-horario m-2 mb-4">
                             <p class="mb-3">

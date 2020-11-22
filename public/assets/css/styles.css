@@ -1444,7 +1444,7 @@ a {
 .inbox-mensagens {
     /* Display & Modelo de Caixa */
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #f79937;
     border-radius: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1456,7 +1456,7 @@ a {
 .box-grade-horario {
     /* Display & Modelo de Caixa */
     border-radius: 10px;
-    border-top: 10px solid #004bbc;
+    border-top: 10px solid #fe5a0b;
 }
 
 .grade-tituloMateria {
@@ -1484,6 +1484,83 @@ a {
 .grade-professional,
 .grade-nome-professor {
     font-family: "Open Sans";
+}
+
+
+/* Combobox Grade */
+
+.combobox-grade-curso,
+.combobox-grade-ano,
+.combobox-grade-semestre {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 8px !important;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.combobox-select-grade-curso,
+.combobox-select-grade-ano,
+.combobox-select-grade-semestre {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 10px;
+    border: 1px solid #f79937;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    flex: 1;
+    outline: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+
+/* botao combobox */
+
+.combobox-grade-curso::after,
+.combobox-grade-ano::after,
+.combobox-grade-semestre::after {
+    /* Posicionamento */
+    position: absolute;
+    top: 0;
+    right: 8px;
+    /* Display & Modelo de Caixa */
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    /* Outros */
+    color: #ffffff;
+    background: linear-gradient(90deg, #f79937 0%, #fe5a0b 100%);
+    font-family: "Font Awesome 5 Free";
+    content: '\25BC';
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease
+}
+
+
+/* Passar Mouse Combobox */
+
+.combobox-select-grade-curso:hover,
+.combobox-select-grade-ano:hover,
+.combobox-select-grade-semestre:hover {
+    border: 1px solid #45cafc;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.20), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
+}
+
+
+/* Passar Mouse Botao Combobox */
+
+.combobox-grade-curso:hover::after,
+.combobox-grade-ano:hover::after,
+.combobox-grade-semestre:hover::after {
+    /* Outros */
+    background: linear-gradient(40deg, #45cafc, #303f9f);
 }
 
 
