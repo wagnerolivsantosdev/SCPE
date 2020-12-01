@@ -3,11 +3,11 @@ var dados, i;
 
 $(function() {
 
+    removerMensagemAlerta()
     backgroundPartiground();
     barraLateral();
     botaoNavbarPrincipal();
     customScrollbar();
-    removerMensagemAlerta();
     charts();
 
     clickEffect();
@@ -29,6 +29,8 @@ $(function() {
     });
 
 
+
+
 });
 
 /*
@@ -36,6 +38,10 @@ $(function() {
  *     Funções Genericas
  * ============================================================================
  */
+
+function removerMensagemAlerta() {
+    $('.alert-danger, .alert-success').fadeOut(5000, "linear");
+}
 
 function backgroundPartiground() {
 
@@ -80,10 +86,6 @@ function backgroundPartiground() {
         });
     }
 
-}
-
-function removerMensagemAlerta() {
-    $('.alert-danger, .alert-success').fadeOut(5000, "linear");
 }
 
 function removerPaginaSelecionada() {
@@ -177,7 +179,10 @@ function requestPage(page) {
     } else if (page == 'consulta') {
         url += 'consulta #breadcrumb, #content';
         $('main').load(url, function() { ComboboxController(); });
-    } else if (page == 'cadastro' || page == 'grade' || page == 'secretaria') {
+    } else if (page == 'grade') {
+        url += 'grade #breadcrumb, #content';
+        $('main').load(url, function() { GradeComboboxController(); });
+    } else if (page == 'cadastro' || page == 'secretaria') {
         url += page + ' #breadcrumb, #content';
         $('main').load(url);
     }
@@ -269,109 +274,7 @@ function removerSidebarOverlay() {
     });
 }
 
-/*
- * ============================================================================
- *     Dashboard
- * ============================================================================
- */
 
-/* Dados dos Graficos Pie e Line */
-
-function charts() {
-
-    if (window.location.pathname == '/dashboard') {
-        'use strict';
-
-        var brandPrimary = 'rgba(51, 179, 90, 1)';
-
-        var LINECHARTEXMPLE = $('#lineChartExample'),
-            PIECHARTEXMPLE = $('#pieChartExample');
-
-        var lineChartExample = new Chart(LINECHARTEXMPLE, {
-            type: 'line',
-            data: {
-                labels: ["Janeiro", "Fevereiro", "Maço", "Abril", "Maio", "Junho", "Julho"],
-                datasets: [{
-                        label: "Data Set One",
-                        fill: true,
-                        lineTension: 0.3,
-                        backgroundColor: "rgba(51, 179, 90, 0.38)",
-                        borderColor: brandPrimary,
-                        borderCapStyle: 'butt',
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        borderWidth: 1,
-                        pointBorderColor: brandPrimary,
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 1,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: brandPrimary,
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 2,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        data: [50, 20, 40, 31, 32, 22, 10],
-                        spanGaps: false
-                    },
-                    {
-                        label: "Data Set Two",
-                        fill: true,
-                        lineTension: 0.3,
-                        backgroundColor: "rgba(75,192,192,0.4)",
-                        borderColor: "rgba(75,192,192,1)",
-                        borderCapStyle: 'butt',
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        borderWidth: 1,
-                        pointBorderColor: "rgba(75,192,192,1)",
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 1,
-                        pointHoverRadius: 5,
-                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 2,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        data: [65, 59, 30, 81, 56, 55, 40],
-                        spanGaps: false
-                    }
-                ]
-            }
-        });
-
-        var pieChartExample = new Chart(PIECHARTEXMPLE, {
-            type: 'doughnut',
-            data: {
-                labels: [
-                    "Primeiro",
-                    "Segundo",
-                    "Terceiro"
-                ],
-                datasets: [{
-                    data: [250, 150, 300],
-                    borderWidth: [1, 1, 1],
-                    backgroundColor: [
-                        brandPrimary,
-                        "rgba(75,192,192,1)",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        brandPrimary,
-                        "rgba(75,192,192,1)",
-                        "#FFCE56"
-                    ]
-                }]
-            }
-        });
-
-        pieChartExample = {
-            responsive: true
-        };
-    }
-
-}
 
 /*
  * ============================================================================
@@ -581,6 +484,205 @@ function btnSalvar(e) {
 
     }
 }
+
+/*
+ * ============================================================================
+ *     Dashboard
+ * ============================================================================
+ */
+
+/* Dados dos Graficos Pie e Line */
+
+function charts() {
+
+    if (window.location.pathname == '/dashboard') {
+        'use strict';
+
+        var brandPrimary = 'rgba(51, 179, 90, 1)';
+
+        var LINECHARTEXMPLE = $('#lineChartExample'),
+            PIECHARTEXMPLE = $('#pieChartExample');
+
+        var lineChartExample = new Chart(LINECHARTEXMPLE, {
+            type: 'line',
+            data: {
+                labels: ["Janeiro", "Fevereiro", "Maço", "Abril", "Maio", "Junho", "Julho"],
+                datasets: [{
+                        label: "Data Set One",
+                        fill: true,
+                        lineTension: 0.3,
+                        backgroundColor: "rgba(51, 179, 90, 0.38)",
+                        borderColor: brandPrimary,
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        borderWidth: 1,
+                        pointBorderColor: brandPrimary,
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: brandPrimary,
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: [50, 20, 40, 31, 32, 22, 10],
+                        spanGaps: false
+                    },
+                    {
+                        label: "Data Set Two",
+                        fill: true,
+                        lineTension: 0.3,
+                        backgroundColor: "rgba(75,192,192,0.4)",
+                        borderColor: "rgba(75,192,192,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        borderWidth: 1,
+                        pointBorderColor: "rgba(75,192,192,1)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        data: [65, 59, 30, 81, 56, 55, 40],
+                        spanGaps: false
+                    }
+                ]
+            }
+        });
+
+        var pieChartExample = new Chart(PIECHARTEXMPLE, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    "Primeiro",
+                    "Segundo",
+                    "Terceiro"
+                ],
+                datasets: [{
+                    data: [250, 150, 300],
+                    borderWidth: [1, 1, 1],
+                    backgroundColor: [
+                        brandPrimary,
+                        "rgba(75,192,192,1)",
+                        "#FFCE56"
+                    ],
+                    hoverBackgroundColor: [
+                        brandPrimary,
+                        "rgba(75,192,192,1)",
+                        "#FFCE56"
+                    ]
+                }]
+            }
+        });
+
+        pieChartExample = {
+            responsive: true
+        };
+    }
+
+}
+
+/*
+ * ============================================================================
+ *     Grade
+ * ============================================================================
+ */
+function comboboxGradeCurso() {
+    var html = '<option disabled>Selecionar Curso</option>';
+
+    limparGrade();
+    removerElementos('#cbxGradeAno, #cbxGradeSemestre');
+    bloquearElemento('#cbxGradeAno, #cbxGradeSemestre');
+
+    $.getJSON("assets/js/json/grade.json", function(dados) {
+        $.each(dados.data, function(index, value) {
+            html += '<option value="' + index + '">' + value['curso'] + '</option>';
+        });
+        $('#cbxGradeCurso').html(html);
+        desbloquearElemento('#cbxGradeCurso');
+    });
+}
+
+function comboboxGradeAno(curso) {
+    var html = '<option disabled>Selecionar Ano</option>';
+
+    limparGrade();
+    removerElementos('#cbxGradeSemestre');
+    bloquearElemento('#cbxGradeSemestre');
+
+    $.getJSON("assets/js/json/grade.json", function(dados) {
+        $.each(dados.data[curso]['grade'], function(index, value) {
+            html += '<option value="' + index + '">' + value['ano'] + '</option>';
+        });
+        $('#cbxGradeAno').html(html);
+        desbloquearElemento('#cbxGradeAno');
+    });
+}
+
+function comboboxGradeSemestre(curso, ano) {
+    var html = '<option disabled>Selecionar Semestre</option>';
+
+    limparGrade();
+
+    $.getJSON("assets/js/json/grade.json", function(dados) {
+        $.each(dados.data[curso]['grade'][ano]['semestre'], function(index, value) {
+            html += '<option value="' + index + '">' + value['semestreAno'] + '</option>';
+        });
+        $('#cbxGradeSemestre').html(html);
+        desbloquearElemento('#cbxGradeSemestre');
+    });
+}
+
+function gerarGradeHorario(curso, ano, semestre) {
+    var semana = ['segunda', 'terca', 'quarta', 'quinta', 'sexta'];
+
+    $.getJSON("assets/js/json/grade.json", function(dados) {
+
+        $.each(dados.data[curso]['grade'][ano]['semestre'][semestre]['horario'], function(index, value) {
+
+            $.each(dados.data[curso]['grade'][ano]['semestre'][semestre]['horario'][index], function(indice, value) {
+                $('#' + semana[index]).find('.tituloMateria' + (indice + 1)).html(value['disciplina']);
+                $('#' + semana[index]).find('.grade-nome-professor' + (indice + 1)).html(value['professor']);
+            });
+        });
+
+    });
+}
+
+function limparGrade() {
+    $('#segunda, #terca, #quarta, #quinta, #sexta').find('.grade-nome-professor1, .grade-nome-professor2').html('');
+}
+
+function GradeComboboxController() {
+
+    limparGrade();
+    comboboxGradeCurso();
+
+    $('#cbxGradeCurso').on('change', function() {
+        limparGrade();
+        comboboxGradeAno($(this).val());
+    });
+
+    $('#cbxGradeAno').on('change', function() {
+        limparGrade();
+        comboboxGradeSemestre($('#cbxGradeCurso').val(), $(this).val());
+    });
+
+    $('#cbxGradeSemestre').on('change', function() {
+        limparGrade();
+        gerarGradeHorario($('#cbxGradeCurso').val(), $('#cbxGradeAno').val(), $(this).val());
+    });
+}
+
+
+
 
 /*
  * ============================================================================

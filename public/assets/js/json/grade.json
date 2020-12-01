@@ -1,0 +1,376 @@
+{
+    "data": [{
+            "curso": "Ciências da Computação",
+            "grade": [{
+                    "ano": 2020,
+                    "semestre": [{
+                            "semestreAno": "8° Semestre",
+                            "horario": [
+                                [{
+                                        "disciplina": "ROBÓTICA E AUTOMAÇÃO",
+                                        "professor": "GILSON TORRES DIAS"
+                                    },
+                                    {
+                                        "disciplina": "ROBÓTICA E AUTOMAÇÃO",
+                                        "professor": "GILSON TORRES DIAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "INTELIGÊNCIA ARTIFICIAL E COMPUTACIONAL",
+                                        "professor": "OSWALDO ORTIZ FERNANDES JUNIOR"
+                                    },
+                                    {
+                                        "disciplina": "PROJETO E ANÁLISE DE ALGORITMOS",
+                                        "professor": "IVAN CARLOS ALCANTARA DE OLIVEIRA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PROJETO E ANÁLISE DE ALGORITMOS",
+                                        "professor": "IVAN CARLOS ALCANTARA DE OLIVEIRA"
+                                    },
+                                    {
+                                        "disciplina": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO II",
+                                        "professor": "IVAN CARLOS ALCANTARA DE OLIVEIRA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "COMPUTAÇÃO GRÁFICA E PROCESSAMENTO DE IMAGEM",
+                                        "professor": "ANDREA ZOTOVICI"
+                                    },
+                                    {
+                                        "disciplina": "INTELIGÊNCIA ARTIFICIAL E COMPUTACIONAL",
+                                        "professor": "OSWALDO ORTIZ FERNANDES JUNIOR"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PROGRAMAÇÃO DE DISPOSITIVOS MÓVEIS",
+                                        "professor": "ANDREA ZOTOVICI"
+                                    },
+                                    {
+                                        "disciplina": "COMPUTAÇÃO GRÁFICA E PROCESSAMENTO DE IMAGEM",
+                                        "professor": "ANDREA ZOTOVICI"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "semestreAno": "7° Semestre",
+                            "horario": [
+                                [{
+                                        "disciplina": "ÁLGEBRA LINEAR COMPUTACIONAL",
+                                        "professor": "REBECA MEIRELLES DAS CHAGAS"
+                                    },
+                                    {
+                                        "disciplina": "GERÊNCIA DE PROJETOS",
+                                        "professor": "EUGEN ERICH PIEKNY"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "GERÊNCIA DE PROJETOS",
+                                        "professor": "EUGEN ERICH PIEKNY"
+                                    },
+                                    {
+                                        "disciplina": "ÁLGEBRA LINEAR COMPUTACIONAL",
+                                        "professor": "REBECA MEIRELLES DAS CHAGAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "MODELOS DE LINGUAGENS DE PROGRAMAÇÃO",
+                                        "professor": "APARECIDO VALDEMIR DE FREITAS"
+                                    },
+                                    {
+                                        "disciplina": "COMPILADORES",
+                                        "professor": "OSWALDO ORTIZ FERNANDES JUNIOR"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "COMPILADORES",
+                                        "professor": "OSWALDO ORTIZ FERNANDES JUNIOR"
+                                    },
+                                    {
+                                        "disciplina": "PROGRAMAÇÃO PARALELA E CONCORRENTE",
+                                        "professor": "APARECIDO VALDEMIR DE FREITAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO I",
+                                        "professor": "IVAN CARLOS ALCANTARA DE OLIVEIRA"
+                                    },
+                                    {
+                                        "disciplina": "ANÁLISE DE DESEMPENHO DE SISTEMAS",
+                                        "professor": "CLAUDIO ALEXANDRE GANANÇA"
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ano": 2019,
+                    "semestre": [{
+                            "semestreAno": "6° Semestre",
+                            "horario": [
+                                [{
+                                        "disciplina": "BANCO DE DADOS II",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    },
+                                    {
+                                        "disciplina": "ENGENHARIA DE SOFTWARE II",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "MÉTODOS PESQUISA CIENTÍFICA",
+                                        "professor": "HELENA DEGREAS"
+                                    },
+                                    {
+                                        "disciplina": "QUALIDADE DE SOFTWARE",
+                                        "professor": "FABRICIO R. PERRELLA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "SISTEMAS DISTRIBUÍDOS",
+                                        "professor": "CARLOS EDUARDO BOGNAR"
+                                    },
+                                    {
+                                        "disciplina": "PESQUISA OPERACIONAL",
+                                        "professor": "ANA CLAUDIA WABISZCZEWICZ CESAR DE CHIARA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "BANCO DE DADOS II",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    },
+                                    {
+                                        "disciplina": "ENGENHARIA DE SOFTWARE II",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PESQUISA OPERACIONAL",
+                                        "professor": "ANA CLAUDIA WABISZCZEWICZ CESAR DE CHIARA"
+                                    },
+                                    {
+                                        "disciplina": "QUALIDADE DE SOFTWARE",
+                                        "professor": "FABRICIO R. PERRELLA"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "semestreAno": "5° Semestre",
+                            "horario": [
+                                [{
+                                        "disciplina": "ENGENHARIA DE SOFTWARE I",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    },
+                                    {
+                                        "disciplina": "BANCO DE DADOS I",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "SISTEMAS OPERACIONAIS II",
+                                        "professor": "CARLOS EDUARDO BOGNAR"
+                                    },
+                                    {
+                                        "disciplina": "TEORIA DOS GRAFOS",
+                                        "professor": "GILSON TORRES DIAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+                                        "professor": "APARECIDO VALDEMIR DE FREITAS"
+                                    },
+                                    {
+                                        "disciplina": "TEORIA DOS GRAFOS",
+                                        "professor": "GILSON TORRES DIAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "BANCO DE DADOS I",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    },
+                                    {
+                                        "disciplina": "ENGENHARIA DE SOFTWARE I",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+                                        "professor": "APARECIDO VALDEMIR DE FREITAS"
+                                    },
+                                    {
+                                        "disciplina": "SISTEMAS OPERACIONAIS II",
+                                        "professor": "CARLOS EDUARDO BOGNAR"
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "curso": "Segurança da Informação",
+            "grade": [{
+                    "ano": 2020,
+                    "semestre": [{
+                        "semestreAno": "8° Semestre",
+                        "horario": [
+                            [{
+                                    "disciplina": "GOVERNANÇA EM TI",
+                                    "professor": "PAULO KENSKE NONAKA"
+                                },
+                                {
+                                    "disciplina": "GOVERNANÇA EM TI",
+                                    "professor": "PAULO KENSKE NONAKA"
+                                }
+                            ],
+                            [{
+                                    "disciplina": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO II",
+                                    "professor": "IVAN CARLOS ALCANTARA DE OLIVEIRA"
+                                },
+                                {
+                                    "disciplina": "PLANEJAMENTO DE SISTEMAS DE INFORMAÇÃO",
+                                    "professor": "CLAUDIO ALEXANDRE GANANCA"
+                                }
+                            ],
+                            [{
+                                    "disciplina": "MÉTODOS ÁGEIS DE DESENVOLVIMENTO DE SISTEMAS",
+                                    "professor": "RICARDO RESENDE DE MENDONCA"
+                                },
+                                {
+                                    "disciplina": "ADMINISTRAÇÃO II",
+                                    "professor": "ANTONIO CARLOS VASQUE"
+                                }
+                            ],
+                            [{
+                                    "disciplina": "METODOLOGIAS, TÉCNICAS E FERRAMENTAS DE APTD",
+                                    "professor": "LUIZ VIEIRA DA COSTA"
+                                },
+                                {
+                                    "disciplina": "METODOLOGIAS, TÉCNICAS E FERRAMENTAS DE APTD",
+                                    "professor": "LUIZ VIEIRA DA COSTA"
+                                }
+                            ],
+                            [{
+                                    "disciplina": "AUDITORIA,SEGURANÇA E AVAL. DE SISTEMAS",
+                                    "professor": "SAMARIS RAMIRO PEREIRA"
+                                },
+                                {
+                                    "disciplina": "AUDITORIA,SEGURANÇA E AVAL. DE SISTEMAS",
+                                    "professor": "SAMARIS RAMIRO PEREIRA"
+                                }
+                            ]
+                        ]
+                    }]
+                },
+                {
+                    "ano": 2019,
+                    "semestre": [{
+                            "semestreAno": "6° Semestre",
+                            "horario": [
+                                [{
+                                        "disciplina": "BANCO DE DADOS II",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    },
+                                    {
+                                        "disciplina": "ENGENHARIA DE SOFTWARE II",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "MÉTODOS PESQUISA CIENTÍFICA",
+                                        "professor": "HELENA DEGREAS"
+                                    },
+                                    {
+                                        "disciplina": "QUALIDADE DE SOFTWARE",
+                                        "professor": "FABRICIO R. PERRELLA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "SISTEMAS DISTRIBUÍDOS",
+                                        "professor": "CARLOS EDUARDO BOGNAR"
+                                    },
+                                    {
+                                        "disciplina": "PESQUISA OPERACIONAL",
+                                        "professor": "ANA CLAUDIA WABISZCZEWICZ CESAR DE CHIARA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "BANCO DE DADOS II",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    },
+                                    {
+                                        "disciplina": "ENGENHARIA DE SOFTWARE II",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PESQUISA OPERACIONAL",
+                                        "professor": "ANA CLAUDIA WABISZCZEWICZ CESAR DE CHIARA"
+                                    },
+                                    {
+                                        "disciplina": "QUALIDADE DE SOFTWARE",
+                                        "professor": "FABRICIO R. PERRELLA"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "semestreAno": "5° Semestre",
+                            "horario": [
+                                [{
+                                        "disciplina": "ENGENHARIA DE SOFTWARE I",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    },
+                                    {
+                                        "disciplina": "BANCO DE DADOS I",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "SISTEMAS OPERACIONAIS II",
+                                        "professor": "CARLOS EDUARDO BOGNAR"
+                                    },
+                                    {
+                                        "disciplina": "TEORIA DOS GRAFOS",
+                                        "professor": "GILSON TORRES DIAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+                                        "professor": "APARECIDO VALDEMIR DE FREITAS"
+                                    },
+                                    {
+                                        "disciplina": "TEORIA DOS GRAFOS",
+                                        "professor": "GILSON TORRES DIAS"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "BANCO DE DADOS I",
+                                        "professor": "JAIRO MARCIANO SILVA"
+                                    },
+                                    {
+                                        "disciplina": "ENGENHARIA DE SOFTWARE I",
+                                        "professor": "CARLOS ALBERTO DE MACEDO"
+                                    }
+                                ],
+                                [{
+                                        "disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+                                        "professor": "APARECIDO VALDEMIR DE FREITAS"
+                                    },
+                                    {
+                                        "disciplina": "SISTEMAS OPERACIONAIS II",
+                                        "professor": "CARLOS EDUARDO BOGNAR"
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
