@@ -1575,6 +1575,28 @@ a {
 }
 
 
+/* Genericas >> Scrollbar Browser
+ ========================================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f79937;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: #303f9f;
+}
+
+
 /* ==========================================================================
    MEDIA QUERIES
  ========================================================================== */
