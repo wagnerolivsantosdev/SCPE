@@ -657,7 +657,7 @@ function gerarGradeHorario(curso, ano, semestre) {
 }
 
 function limparGrade() {
-    $('#segunda, #terca, #quarta, #quinta, #sexta').find('.grade-nome-professor1, .grade-nome-professor2').html('');
+    $('#segunda, #terca, #quarta, #quinta, #sexta').find('.tituloMateria1, .tituloMateria2, .grade-nome-professor1, .grade-nome-professor2').html('');
 }
 
 function GradeComboboxController() {
