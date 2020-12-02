@@ -1,0 +1,202 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "SCPE",
+        "description": "Sistema Controle De Ementas e Plano de Ensino",
+        "termsOfService": "#",
+        "contact": {
+            "name": "API Support",
+            "url": "#",
+            "email": "#"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/cursos": {
+            "post": {
+                "tags": [
+                    "Curso"
+                ],
+                "summary": "Lista dos Cursos",
+                "description": "Retorna Lista dos Cursos",
+                "operationId": "getCoursesList",
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        },
+        "/api/disciplinas": {
+            "post": {
+                "tags": [
+                    "Disciplina"
+                ],
+                "summary": "Lista Disciplinas",
+                "description": "Retorna Lista das Disciplinas baseadas nos IDs",
+                "operationId": "getDiciplinesById",
+                "parameters": [
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do Curso",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "grade",
+                        "in": "path",
+                        "description": "ID da Grade",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "curso": "1",
+                                    "grade": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/ementa": {
+            "post": {
+                "tags": [
+                    "Ementa"
+                ],
+                "summary": "Ementa",
+                "description": "Retorna Ementa Baseada nos IDs",
+                "operationId": "getEmentaById",
+                "parameters": [
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do Curso",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "grade",
+                        "in": "path",
+                        "description": "ID da Grade",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "disciplina",
+                        "in": "path",
+                        "description": "ID da Disciplina",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "curso": {
+                                        "type": "integer"
+                                    },
+                                    "grade": {
+                                        "type": "integer"
+                                    },
+                                    "disciplina": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "curso": "1",
+                                    "grade": "1",
+                                    "disciplina": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/grades": {
+            "post": {
+                "tags": [
+                    "Grade"
+                ],
+                "summary": "Lista das Grades",
+                "description": "Retorna Grade Baseada no ID",
+                "operationId": "getGridsById",
+                "parameters": [
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do Curso",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
