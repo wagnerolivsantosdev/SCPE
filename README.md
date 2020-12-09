@@ -1,78 +1,152 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<h1 id="inicio" align="center">Sistema de Controle de Ementas e Planos de Ensino</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<p align="justify">
+    O projeto visa implementar o Sistema de Controle de Ementa e Plano de Ensino na universidade. Para que a instituição de ensino obtenham a autorização de abertura de cursos concedida pelo MEC, precisa enviar e aprovar documentos, que devem incluir uma
+    descrição dos principais tópicos a serem tratados na disciplina. A ferramenta também pode ser utilizada como controle para que os gestores dos cursos garantam que esses documentos estejam disponíveis nos prazos exigidos. Os documentos são necessários
+    para o processo de transferência de alunos de outras instituições de ensino.
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h2 id="indice">📋 ÍNDICE</h2>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p>💠 <a href="#objetivo">OBJETIVO</a></p>
+<p>💠 <a href="#intalacao">INSTALAÇÃO</a></p>
+<p>💠 <a href="#executandoAmbiente">EXECUTANDO O AMBIENTE DE DESENVOLVIMENTO</a></p>
+<p>💠 <a href="#rotas">ROTA</a></p>
+<p>💠 <a href="#license">LICENÇA</a></p>
+<p>💠 <a href="#contato">CONTATO</a></p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<hr>
 
-## Learning Laravel
+<!-- OBJETIVO ESPECIFICOS -->
+<h2 id="objetivo">🎯 Objetivos</h2>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<pre>
+    📌	<b>Disponibilizar o Plano de Ensino para os professores e estudantes</b>
+    📌	<b>Apoiar a secretaria técnica mediante disponibilização dos planos de ensino para subsidiar processos de transferência de estudantes</b>
+    📌	<b>Comunicar aos docentes, por meio de mensagens, sobre o status de geração dos planos de ensino</b>
+    📌	<b>Disponibilizar controle de entrega de planos de ensino ao coordenador</b>
+    📌	<b>Garantir as referências bibliográficas apontadas nos planos de ensino estejam catalogadas na biblioteca</b>
+    📌	<b>Garantir que as bibliografias básicas e complementares estejam com as quantidades definidas no projeto pedagógico de cada curso</b>
+    📌	<b>Armazenar em banco de dados, os planos de cada semestre letivo</b>
+</pre>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<hr>
 
-## Laravel Sponsors
+<!-- INSTALAÇÃO GERAL -->
+<h2 id="intalacao">🛠️ INSTALAÇÃO</h2>
+<h3>Requisitos</h3>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<pre>
+    ✔️	<a href="https://getcomposer.org/download/">Composer</a>
+    ✔️	<a href="https://laravel.com/docs/7.x">Laravel</a>
+    ✔️	<a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+    ✔️	<a href="https://www.wampserver.com/en/">WampServer</a> ou <a href="https://www.apachefriends.org/pt_br/download.html">Xampp</a>
+</pre>
+<br>
+<p><b>1 - </b>Instação Visual Studio Code</p>
+<p><b>2 - </b>Instação WampServer</p>
+<p><b>3 - </b>Instação Composer</p>
+<p><b>4 - </b>Clone Repositório
+    <pre><b>    git clone</b> https://github.com/wagnerolivsantos/SCPE1.0.git</pre>
+</p>
+<p><b>5 - </b>Iniciar Visual Studio Code com a pasta do projeto sendo workspace. Posteriormente copiar o arquivo <b>.env.example</b> e colar como <b>.env</b></p>
+<p><b>6 - </b>Abrir o Terminal do Visual Studio, seguindo os seguintes comandos:
+    <pre>
+        -> composer install
+        -> php artisan key:generate
+        -> php artisan serve => (Acesse: http://127.0.0.1:8000/login)
+        -> retornar ao terminar e parar o servidor ctrl + c
+    </pre>
+</p>
+<p><b>7 - </b>Iniciar o WampServer e acessar o MySql Console.</p>
+<p><b>8 - </b>Executar o Script 'modeloLogico.sql' no  MySql Console que encontra-se no diretório database dentro do projeto.</p>
+<p><b>9 - </b>Configurar o arquivo '.env' na pasta do projeto para ter conexão com o Base de Dados.
+    <pre>
+        Ao abrir o arquivo .env, procure por:
+        <p>
+            DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=laravel
+            DB_USERNAME=root
+            DB_PASSWORD=
+        </p>
+        Configure de acordo com seu Banco de Dados
+        <p>
+            DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=scpe
+            DB_USERNAME=root
+            DB_PASSWORD=
+        </p>
+        Após esse processo feche o arquivo '.env'.
+    </pre>
+</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+<hr>
 
-## Contributing
+<!-- EXECUCAÇÃO DO AMBIENTE -->
+<h2 id="executandoAmbiente">🏍️💨 EXECUTANDO AMBIENTE DE DESENVOLVIMENTO</h2>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p>Iniciar o terminal no Visual Studio, tendo o projeto aberto como workspace.</p>
+<pre>
+    php artisan serve (Acesse: http://127.0.0.1:8000/login)
+</pre>
 
-## Code of Conduct
+<hr>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<h2 id="rotas">🚊 Rotas</h2>
 
-## Security Vulnerabilities
+| EndPoint | Método | Body | Resposta |
+| -------- | ------ | --------- | -------- |
+| /api/cursos | POST |  | {"data":[{"id":1,"curso":"Ciências da Computação"},{"id":2,"curso":"Ciências Econômicas"},{"id":3,"curso":"Segurança da Informação"}]} |
+| /api/grades | POST | curso:1 | {"data":[{"id": 1,"ano": 2020,"semestre": "1"},{"id": 2,"ano": 2019,"semestre": "2"},{"id": 3,"ano": 2018,"semestre": "3"}]} |
+| /api/disciplinas | POST | grade:2 | {"data": [{"id": 7,"disciplina": "Algoritmos e Estrutura de Dados II"},{"id": 8,"disciplina": "Estatística Aplicada a Computação"},{"id": 9,"disciplina": "Linguagem de Programação II"},{"id": 10,"disciplina": "Matemática Aplicada"},{"id": 11,"disciplina": "Psicologia Aplicada"},{"id": 12,"disciplina": "Sistemas Digitais"}]} |
+| /api/ementa | POST | disciplina:7 | {"data": [{"ementa": "Ementa: Algorítmos e Estrutura de Dados II"}]} |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<h3>Exemplo</h3>
 
-## License
+<p>Essa rota retorna um <b><i>JSON</i></b> contendo todos os <code>cursos</code>.</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<pre>
+	<code><b>Post</b> /api/cursos</code>
+</pre>
+
+<h4>Resultado:</h4>
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "curso": "Ciências da Computação"
+        },
+        {
+            "id": 2,
+            "curso": "Ciências Econômicas"
+        },
+        {
+            "id": 3,
+            "curso": "Segurança da Informação"
+        }
+    ]
+}
+```
+<hr>
+
+<!-- LICENÇA -->
+<h2 id="license">💡	LICENÇA</h2>
+
+<p>Este projeto está licenciado sob a licença MIT - consulte o arquivo <a href="#">LICENSE.md</a> para obter detalhes</p></p>
+
+<hr>
+
+<h2 id ="contato">✉️ CONTATO</h2>
+
+<p><b>Contato:</b> wagnerolivsantos@outlook.com</p>
+
+<hr>
+	
+<p align="right"><a href="#inicio">🆙</a></p></p>
