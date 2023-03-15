@@ -145,7 +145,7 @@
 
 <h2 id ="contato">✉️ CONTATO</h2>
 
-<p><b>Contato:</b> wagnerolivsantos@outlook.com</p>
+<p><b>Contato:</b> wagnerolivsantosdev@gmail.com</p>
 
 <hr>
 	
